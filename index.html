@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলী আহমদ পেমেন্ট ভেরিফিকেশন সিস্টেম</title>
+    <!-- Tailwind CSS for Modern Premium Design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .premium-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+        .tap-scale {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .tap-scale:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between py-10 px-4">
+
+    <!-- Main Card Container -->
+    <div class="max-w-2xl mx-auto w-full bg-white rounded-3xl premium-shadow overflow-hidden border border-slate-100">
+        
+        <!-- Header Section -->
+        <div class="bg-gradient-to-r from-slate-900 to-indigo-950 p-8 text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent)]"></div>
+            <div class="relative z-10">
+                <div class="mx-auto w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                    <i class="fa-solid fa-shield-halved text-3xl text-indigo-400 animate-pulse"></i>
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight">আলী আহমদ পেমেন্ট ভেরিফিকেশন সিস্টেম</h1>
+                <p class="text-slate-400 text-sm mt-2">ব্যক্তিগত মোবাইল ব্যাংকিংয়ে টাকা পাঠিয়ে পেমেন্টটি তাৎক্ষণিক ভেরিফাই করুন</p>
+            </div>
+        </div>
+
+        <!-- Instruction & Click-To-Copy Section -->
+        <div class="p-6 border-b border-slate-100 bg-slate-50/50">
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">টাকা পাঠানোর নম্বরসমূহ (ক্লিক করে কপি করুন)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                
+                <!-- bKash Card -->
+                <button onclick="copyNumber('bkash')" class="tap-scale bg-white p-3 rounded-2xl border border-slate-100 flex items-center space-x-3 shadow-sm hover:border-pink-300 hover:shadow text-left w-full focus:outline-none">
+                    <img src="https://raw.githubusercontent.com/ShahnurAlam/bkash-nagad-rocket-sms-regex/main/icons/bkash.png" class="w-10 h-10 rounded-xl object-contain bg-pink-50 p-1" alt="bKash" onerror="this.src='https://placehold.co/40?text=bKash'">
+                    <div class="overflow-hidden">
+                        <p class="text-[10px] text-pink-600 font-semibold uppercase">bKash Personal</p>
+                        <p class="text-sm font-bold text-slate-700 tracking-wide" id="disp_bkash">01788631477</p>
+                        <span class="text-[9px] text-slate-400 block"><i class="fa-regular fa-copy mr-1"></i>কপি করতে চাপুন</span>
+                    </div>
+                </button>
+
+                <!-- Nagad Card -->
+                <button onclick="copyNumber('nagad')" class="tap-scale bg-white p-3 rounded-2xl border border-slate-100 flex items-center space-x-3 shadow-sm hover:border-orange-300 hover:shadow text-left w-full focus:outline-none">
+                    <img src="https://raw.githubusercontent.com/ShahnurAlam/bkash-nagad-rocket-sms-regex/main/icons/nagad.png" class="w-10 h-10 rounded-xl object-contain bg-orange-50 p-1" alt="Nagad" onerror="this.src='https://placehold.co/40?text=Nagad'">
+                    <div class="overflow-hidden">
+                        <p class="text-[10px] text-orange-600 font-semibold uppercase">Nagad Personal</p>
+                        <p class="text-sm font-bold text-slate-700 tracking-wide" id="disp_nagad">01788631477</p>
+                        <span class="text-[9px] text-slate-400 block"><i class="fa-regular fa-copy mr-1"></i>কপি করতে চাপুন</span>
+                    </div>
+                </button>
+
+                <!-- Rocket Card -->
+                <button onclick="copyNumber('rocket')" class="tap-scale bg-white p-3 rounded-2xl border border-slate-100 flex items-center space-x-3 shadow-sm hover:border-purple-300 hover:shadow text-left w-full focus:outline-none">
+                    <img src="https://raw.githubusercontent.com/ShahnurAlam/bkash-nagad-rocket-sms-regex/main/icons/rocket.png" class="w-10 h-10 rounded-xl object-contain bg-purple-50 p-1" alt="Rocket" onerror="this.src='https://placehold.co/40?text=Rocket'">
+                    <div class="overflow-hidden">
+                        <p class="text-[10px] text-purple-600 font-semibold uppercase">Rocket Personal</p>
+                        <p class="text-sm font-bold text-slate-700 tracking-wide" id="disp_rocket">01788631477</p>
+                        <span class="text-[9px] text-slate-400 block"><i class="fa-regular fa-copy mr-1"></i>কপি করতে চাপুন</span>
+                    </div>
+                </button>
+
+            </div>
+            
+            <div class="mt-4 p-4 bg-indigo-50/50 rounded-2xl border border-indigo-100/50 flex items-start space-x-3">
+                <i class="fa-solid fa-circle-info text-indigo-500 mt-1 text-base"></i>
+                <p class="text-xs text-indigo-950 leading-relaxed">
+                    উপরের যেকোনো একটি মাধ্যমে **Send Money** করার পর ফিরতি মেসেজে বা অ্যাপে প্রাপ্ত **TrxID (ট্রানজেকশন আইডি)** এবং আপনার নিজের **প্রেরক নম্বরটি** দিয়ে নিচের ফর্মটি পূরণ করুন।
+                </p>
+            </div>
+        </div>
+
+        <!-- Student Payment Verification Form -->
+        <div class="p-8">
+            <form id="verifyForm" onsubmit="event.preventDefault(); handleVerification();" class="space-y-5">
+                
+                <!-- Student / Roll ID -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center">
+                        <i class="fa-solid fa-id-card text-indigo-500 mr-2"></i>স্টুডেন্ট আইডি / রোল নম্বর
+                    </label>
+                    <input type="text" id="studentId" required placeholder="উদাহরণ: STD-2026" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-slate-800 font-medium">
+                </div>
+
+                <!-- Transaction ID (TxnID) -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center justify-between">
+                        <span class="flex items-center"><i class="fa-solid fa-receipt text-indigo-500 mr-2"></i>পেমেন্ট ট্রানজেকশন আইডি (TrxID)</span>
+                        <span class="text-xs text-indigo-600 font-medium font-semibold">ইংরেজিতে লিখুন</span>
+                    </label>
+                    <input type="text" id="txnId" required placeholder="যেমন: BKX987HGF" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-slate-800 uppercase font-semibold tracking-wider">
+                </div>
+
+                <!-- Custom Inline Alert Message Box -->
+                <div id="statusBox" class="hidden p-4 rounded-2xl text-sm transition-all duration-300">
+                    <!-- Dynamic Alert Content -->
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="btnSubmit" 
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 active:transform active:scale-[0.99] text-white font-bold py-4 px-6 rounded-2xl transition duration-200 shadow-lg shadow-indigo-100 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-circle-check text-lg"></i>
+                    <span>পেমেন্ট নিশ্চিত করুন</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simple Secure Footer -->
+    <div class="text-center mt-8 text-slate-400 text-xs">
+        <p>মানিকপীর মাদ্রাসা পেমেন্ট গেটওয়ে দ্বারা সুরক্ষিত। সর্বস্বত্ব সংরক্ষিত © 2026</p>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="hidden fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-xl z-50 flex items-center space-x-2">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+        <span id="toastText">কপি হয়েছে!</span>
+    </div>
+
+    <!-- Scripting for configuration and Actions -->
+    <script>
+        // =======================================================
+        // আপনার কনফিগারেশনসমূহ (CONFIGURATIONS)
+        // =======================================================
+        const CONFIG = {
+            WEB_APP_URL: "https://script.google.com/macros/s/YOUR_DEPLOYED_ID_HERE/exec", // আপনার Apps Script Deploy Web App URL টি এখানে বসাবেন
+            BKASH_NUMBER: "017XXXXXXXX", // আপনার বিকাশ পার্সোনাল নম্বর দিন
+            NAGAD_NUMBER: "018XXXXXXXX", // আপনার নগদ পার্সোনাল নম্বর দিন
+            ROCKET_NUMBER: "019XXXXXXXX"  // আপনার রকেট পার্সোনাল নম্বর দিন
+        };
+
+        // =======================================================
+        // পেজ লোড হওয়ার পর নম্বর অ্যাসাইন করা
+        // =======================================================
+        window.onload = function() {
+            document.getElementById("disp_bkash").innerText = CONFIG.BKASH_NUMBER;
+            document.getElementById("disp_nagad").innerText = CONFIG.NAGAD_NUMBER;
+            document.getElementById("disp_rocket").innerText = CONFIG.ROCKET_NUMBER;
+        };
+
+        // =======================================================
+        // ক্লিক টু কপি নম্বর ফাংশন
+        // =======================================================
+        function copyNumber(provider) {
+            let number = "";
+            let name = "";
+            
+            if (provider === 'bkash') { number = CONFIG.BKASH_NUMBER; name = "বিকাশ"; }
+            else if (provider === 'nagad') { number = CONFIG.NAGAD_NUMBER; name = "নগদ"; }
+            else if (provider === 'rocket') { number = CONFIG.ROCKET_NUMBER; name = "রকেট"; }
+
+            // ক্লিপবোর্ডে কপি করা
+            navigator.clipboard.writeText(number).then(() => {
+                showToast(`${name} নম্বরটি (${number}) কপি করা হয়েছে!`);
+            }).catch(err => {
+                // অল্টারনেটিভ কপি মেথড (পুরানো ব্রাউজারের জন্য)
+                const el = document.createElement('textarea');
+                el.value = number;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                showToast(`${name} নম্বরটি (${number}) কপি করা হয়েছে!`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toastText").innerText = message;
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 3000);
+        }
+
+        // =======================================================
+        // পেমেন্ট ভেরিফিকেশন API কল করা
+        // =======================================================
+        function handleVerification() {
+            const url = CONFIG.WEB_APP_URL;
+            
+            if (url.includes("https://script.google.com/macros/s/AKfycbxXPDgk0YwonSG2bdpYb53OpPSF8ygdGVQ7PUY9DfO_nTh8PUZgmF7lMibFrb42pwU1/exec") || !url) {
+                showStatus("error", "সিস্টেম কনফিগারেশন সম্পন্ন করা হয়নি! দয়া করে আপনার code.gs ফাইলের লিংকটি বসান।");
+                return;
+            }
+
+            const studentId = document.getElementById("studentId").value.trim();
+            const txnId = document.getElementById("txnId").value.trim().toUpperCase();
+            const btn = document.getElementById("btnSubmit");
+
+            // UI আপডেট (Loading State)
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin text-lg mr-2"></i> পেমেন্ট স্টেটাস পরীক্ষা করা হচ্ছে...';
+            hideStatus();
+
+            const payload = {
+                "action": "verify",
+                "studentId": studentId,
+                "txnId": txnId
+            };
+
+            // Post request with text/plain format to prevent pre-flight CORS blocked errors
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showStatus("success", `
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-xl mr-3 mt-0.5 text-emerald-600"></i>
+                            <div>
+                                <strong class="font-bold block text-emerald-950">পেমেন্ট সফলভাবে ভেরিফাইড!</strong>
+                                <span class="text-emerald-900 leading-relaxed">স্টুডেন্ট আইডি <strong class="font-bold">${studentId}</strong> এর অনুকূলে <strong>${data.senderNumber}</strong> নম্বর থেকে পাঠানো <strong>${data.amount}</strong> টাকার ট্রানজেকশনটি (${txnId}) সফলভাবে অনুমোদন করা হয়েছে।</span>
+                            </div>
+                        </div>`);
+                } else if (data.status === 'already_verified') {
+                    showStatus("warning", `
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-circle-exclamation text-xl mr-3 mt-0.5 text-amber-600"></i>
+                            <div>
+                                <strong class="font-bold block text-amber-950">ইতিমধ্যে ভেরিফাইড!</strong>
+                                <span class="text-amber-900 leading-relaxed">এই ট্রানজেকশন আইডিটি ইতিমধ্যে সিস্টেমে ভেরিফাই করা হয়েছে। একই ট্রানজেকশন আইডি দিয়ে পুনরায় চেষ্টা করা গ্রহণযোগ্য নয়।</span>
+                            </div>
+                        </div>`);
+                } else {
+                    showStatus("error", `
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-triangle-exclamation text-xl mr-3 mt-0.5 text-rose-600"></i>
+                            <div>
+                                <strong class="font-bold block text-rose-950">ভেরিফিকেশন ব্যর্থ!</strong>
+                                <span class="text-rose-900 leading-relaxed">${data.message}</span>
+                            </div>
+                        </div>`);
+                }
+            })
+            .catch(error => {
+                showStatus("error", `
+                    <div class="flex items-start">
+                        <i class="fa-solid fa-circle-xmark text-xl mr-3 mt-0.5 text-rose-600"></i>
+                        <div>
+                            <strong class="font-bold block text-rose-950">সংযোগ স্থাপন করা যায়নি!</strong>
+                            <span class="text-rose-900 leading-relaxed">নেটওয়ার্ক সমস্যার কারণে বা Google Script URL টিতে ডেপ্লয়মেন্টে সমস্যা থাকায় আপনার ট্রানজেকশনটি ভেরিফাই করা যাচ্ছে না। কিছুক্ষণ পরে চেষ্টা করুন।</span>
+                        </div>
+                    </div>`);
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-circle-check text-lg mr-2"></i> পেমেন্ট নিশ্চিত করুন';
+            });
+        }
+
+        // স্টেটাস বক্স কন্ট্রোল ফাংশনসমূহ
+        function showStatus(type, htmlContent) {
+            const box = document.getElementById("statusBox");
+            box.innerHTML = htmlContent;
+            box.classList.remove("hidden");
+            
+            if (type === "success") {
+                box.className = "p-4 rounded-2xl text-sm bg-emerald-50 border border-emerald-200 text-emerald-800 shadow-sm";
+            } else if (type === "warning") {
+                box.className = "p-4 rounded-2xl text-sm bg-amber-50 border border-amber-200 text-amber-800 shadow-sm";
+            } else {
+                box.className = "p-4 rounded-2xl text-sm bg-rose-50 border border-rose-200 text-rose-800 shadow-sm";
+            }
+        }
+
+        function hideStatus() {
+            document.getElementById("statusBox").className = "hidden p-4 rounded-2xl text-sm";
+        }
+    </script>
+</body>
+</html>
